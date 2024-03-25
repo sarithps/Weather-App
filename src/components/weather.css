@@ -41,7 +41,9 @@
     font-weight: 600;
   }
   
-  
+  .location-and-date__time{
+    padding: 10px;
+  }
   
   /* current-temperature */
   .current-temperature {

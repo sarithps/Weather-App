@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./home.css";
 import { fetchCoordinates, fetchWeatherData } from "../services/WeatherService";
 import Weather from "./weather";
+import noMessage from "../no-message.png";
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -42,7 +43,14 @@ const Home = () => {
       </form>
       {weatherData && <Weather weatherData={weatherData} cityName={cityName} />}
       {error && (
-        <div> Enter valid city name</div>
+        <div>
+          <div>
+            <img id="no-message-icon" src={noMessage} alt="logo" />
+          </div>
+          <div className="no-message-text">
+          Please enter a valid city name
+          </div>       
+        </div>
       )}
     </div>
   );

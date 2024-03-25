@@ -42,4 +42,12 @@
   .submit-button:hover {
     background-color: #0056b3;
   }
+
+  .no-message-text{
+    padding: 20px;
+  }
+
+  #no-message-icon{
+    height: 60px;
+  }
   

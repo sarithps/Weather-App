@@ -30,7 +30,7 @@ const Weather = ({ weatherData, cityName }) => {
     <div className="main-container">
       <div className="location-and-date">
         <h1 className="location-and-date__location"> {cityName} </h1>
-        <div> {getDateTime(weatherData?.current_weather.time)} </div>
+        <div className="location-and-date__time"> {getDateTime(weatherData?.current_weather.time)} </div>
       </div>
 
       <div className="current-temperature">
