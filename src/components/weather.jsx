@@ -1,6 +1,10 @@
 import React from "react";
 import "./weather.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { FiSunrise, FiSunset } from "react-icons/fi";
+import { CiTempHigh } from "react-icons/ci";
+import { TbWind } from "react-icons/tb";
+import { FaRegCalendarAlt } from "react-icons/fa";
 
 const Weather = ({ weatherData, cityName }) => {
   function getTimeFromDateTime(dateTimeString) {
@@ -46,23 +50,27 @@ const Weather = ({ weatherData, cityName }) => {
         <div>
           <div className="current-stats__value">
             {" "}
+            <CiTempHigh />  {" "}
             {weatherData?.daily.temperature_2m_max[0]}{" "}
-            {weatherData?.daily_units.temperature_2m_max}{" "}
+            {weatherData?.daily_units.temperature_2m_max}{" "} 
           </div>
           <div className="current-stats__label">High</div>
           <div className="current-stats__value">
+          <TbWind />  {" "}
             {weatherData?.current_weather.windspeed}{" "}
-            {weatherData?.current_weather_units.windspeed}
+            {weatherData?.current_weather_units.windspeed} 
           </div>
           <div className="current-stats__label">Wind</div>
         </div>
         <div>
           <div className="current-stats__value">
-            {getTimeFromDateTime(weatherData?.daily.sunrise[0])}
+          <FiSunrise/>  {" "}
+            {getTimeFromDateTime(weatherData?.daily.sunrise[0])} 
           </div>
-          <div className="current-stats__label">Sunrise</div>
+          <div className="current-stats__label">Sunrise </div>
           <div className="current-stats__value">
-            {getTimeFromDateTime(weatherData?.daily.sunset[0])}
+          <FiSunset /> {" "}
+            {getTimeFromDateTime(weatherData?.daily.sunset[0])} 
           </div>
           <div className="current-stats__label">Sunset</div>
         </div>
@@ -73,14 +81,15 @@ const Weather = ({ weatherData, cityName }) => {
         <div className="next-5-days__container">
           <div className="next-5-days__row">
             <div className="next-5-days__date">
-              {getDateFromDateTime(weatherData?.daily.time[1])}
+            <FaRegCalendarAlt /> {" "}{getDateFromDateTime(weatherData?.daily.time[1])}
             </div>
             <div className="next-5-days__high">
-              {weatherData?.daily.temperature_2m_max[1]}
+            <CiTempHigh />  {" "}{weatherData?.daily.temperature_2m_max[1]} {weatherData?.daily_units.temperature_2m_max}
               <div className="next-5-days__label">High</div>
             </div>
 
             <div className="next-5-days__wind">
+            <TbWind />  {" "}
               {weatherData?.daily.windspeed_10m_max[1]}{" "}
               {weatherData?.daily_units.windspeed_10m_max}
               <div className="next-5-days__label">Wind</div>
@@ -89,15 +98,16 @@ const Weather = ({ weatherData, cityName }) => {
 
           <div className="next-5-days__row">
             <div className="next-5-days__date">
-              {getDateFromDateTime(weatherData?.daily.time[2])}
+            <FaRegCalendarAlt /> {" "}{getDateFromDateTime(weatherData?.daily.time[2])}
             </div>
 
             <div className="next-5-days__high">
-              {weatherData?.daily.temperature_2m_max[2]}
+              <CiTempHigh />  {" "}{weatherData?.daily.temperature_2m_max[2]} {weatherData?.daily_units.temperature_2m_max}
               <div className="next-5-days__label">High</div>
             </div>
 
             <div className="next-5-days__wind">
+            <TbWind />  {" "}
               {weatherData?.daily.windspeed_10m_max[2]}{" "}
               {weatherData?.daily_units.windspeed_10m_max}
               <div className="next-5-days__label">Wind</div>
@@ -106,15 +116,16 @@ const Weather = ({ weatherData, cityName }) => {
 
           <div className="next-5-days__row">
             <div className="next-5-days__date">
-              {getDateFromDateTime(weatherData?.daily.time[3])}
+            <FaRegCalendarAlt /> {" "}{getDateFromDateTime(weatherData?.daily.time[3])}
             </div>
 
             <div className="next-5-days__high">
-              {weatherData?.daily.temperature_2m_max[3]}
+              <CiTempHigh />  {" "}{weatherData?.daily.temperature_2m_max[3]} {weatherData?.daily_units.temperature_2m_max}
               <div className="next-5-days__label">High</div>
             </div>
 
             <div className="next-5-days__wind">
+            <TbWind />  {" "}
               {weatherData?.daily.windspeed_10m_max[3]}{" "}
               {weatherData?.daily_units.windspeed_10m_max}
               <div className="next-5-days__label">Wind</div>
@@ -123,15 +134,16 @@ const Weather = ({ weatherData, cityName }) => {
 
           <div className="next-5-days__row">
             <div className="next-5-days__date">
-              {getDateFromDateTime(weatherData?.daily.time[4])}
+            <FaRegCalendarAlt /> {" "}{getDateFromDateTime(weatherData?.daily.time[4])}
             </div>
 
             <div className="next-5-days__high">
-              {weatherData?.daily.temperature_2m_max[4]}
+              <CiTempHigh />  {" "}{weatherData?.daily.temperature_2m_max[4]} {weatherData?.daily_units.temperature_2m_max}
               <div className="next-5-days__label">High</div>
             </div>
 
             <div className="next-5-days__wind">
+            <TbWind />  {" "}
               {weatherData?.daily.windspeed_10m_max[4]}{" "}
               {weatherData?.daily_units.windspeed_10m_max}
               <div className="next-5-days__label">Wind</div>
@@ -140,15 +152,16 @@ const Weather = ({ weatherData, cityName }) => {
 
           <div className="next-5-days__row">
             <div className="next-5-days__date">
-              {getDateFromDateTime(weatherData?.daily.time[5])}
+            <FaRegCalendarAlt /> {" "}{getDateFromDateTime(weatherData?.daily.time[5])}
             </div>
 
             <div className="next-5-days__high">
-              {weatherData?.daily.temperature_2m_max[5]}
+              <CiTempHigh />  {" "}{weatherData?.daily.temperature_2m_max[5]} {weatherData?.daily_units.temperature_2m_max}
               <div className="next-5-days__label">High</div>
             </div>
 
             <div className="next-5-days__wind">
+            <TbWind />  {" "}
               {weatherData?.daily.windspeed_10m_max[5]}{" "}
               {weatherData?.daily_units.windspeed_10m_max}
               <div className="next-5-days__label">Wind</div>
