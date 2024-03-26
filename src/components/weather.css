@@ -52,18 +52,9 @@
     width: 100%;
   }
   
-  .current-temperature__icon-container {
-    flex-grow: 1.25;
-    text-align: center;
-  }
-  
   .current-temperature__content-container {
     flex-grow: 1;
     text-align: center;
-  }
-  
-  .current-temperature__icon {
-    width: 10.5em;
   }
   
   .current-temperature__value {
@@ -149,26 +140,19 @@
   
   .next-5-days__date,
   .next-5-days__high,
-  .next-5-days__low,
-  .next-5-days__icon,
-  .next-5-days__rain,
   .next-5-days__wind {
     width: 33.33333%;
     font-size: 0.95em;
   }
   
   .next-5-days__date,
-  .next-5-days__high,
-  .next-5-days__low {
+  .next-5-days__high {
     margin-bottom: 0.6em;
   }
   
   @media screen and (min-width: 450px) {
     .next-5-days__date,
     .next-5-days__high,
-    .next-5-days__low,
-    .next-5-days__icon,
-    .next-5-days__rain,
     .next-5-days__wind {
       width: 16.666666%;
       margin-bottom: initial;
@@ -178,8 +162,5 @@
       order: -2;
     }
   
-    .next-5-days__icon {
-      order: -1;
-    }
   }
   

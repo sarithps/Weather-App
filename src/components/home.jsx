@@ -15,7 +15,6 @@ const Home = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    // setCityName(inputRef.current.value);
 
     try {
       const { latitude, longitude } = await fetchCoordinates(
@@ -64,7 +63,6 @@ const Home = () => {
       ) : (
         weatherData && <Weather weatherData={weatherData} cityName={cityName} />
       )}
-      {/* {weatherData && <Weather weatherData={weatherData} cityName={cityName} />} */}
       {error && !loading && (
         <div>
           <div>
